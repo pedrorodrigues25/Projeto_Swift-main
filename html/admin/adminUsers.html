@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - Users</title>
+  <link rel="stylesheet" href="/css/adminUsers.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/assets/img/logoE.png" alt="Swift Logo">
+    </div>
+    <nav>
+      <a href="adminDashboard.html">Dashboard</a>
+      <a href="adminUsers.html">Users</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Users</h1>
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+    </div>
+    <div class="user-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">Swift</div>
+      <div class="footer-info">
+        <p><strong>Email:</strong> caldas@swift.com</p>
+        <p><strong>Location:</strong> Porto</p>
+        <p><strong>Contact:</strong> +351 930513083</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="userModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-user-info">
+        <div class="modal-left">
+          <p><strong>User</strong></p>
+          <h2 id="modalName"></h2>
+          <p>Id: <span id="modalId"></span></p>
+          <p>Email: <span id="modalEmail"></span></p>
+          <button class="suspend-btn">Suspend</button>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <div class="modal-right">
+          <p><strong>Number of miles</strong><br><span id="modalMiles"></span></p>
+          <p><strong>Quizzes</strong><br><span id="modalQuizzes"></span></p>
+          <p><strong>Age</strong><br><span id="modalAge"></span></p>
+          <p><strong>Joined on</strong><br><span id="modalJoined"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/js/views/AdminUsers.js"></script>
+</body>
+</html>

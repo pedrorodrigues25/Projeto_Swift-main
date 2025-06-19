@@ -1,0 +1,335 @@
+/* import of website fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+
+}
+h1, h2, h3 {
+  font-family: "Montserrat Alternates";
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background: #fff;
+  color: #001542;
+}
+
+header {
+  padding: 20px 50px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #001542;
+  font-size: 14px;
+}
+
+.logo {
+  height: 30px;
+}
+
+.menu-icon {
+  margin-left: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #001542;
+
+}
+
+.discover-page {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.destination {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.destination img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+.destination h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 36px;
+  color: #f6b200;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+.destination-text {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.destination-text img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.destination-text .text {
+  flex: 1;
+}
+
+.destination-text h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #0a3c5f;
+}
+
+.destination-text p {
+  font-size: 16px;
+  color: #333;
+  max-width: 600px;
+}
+
+.quiz-section {
+  margin: 60px 0;
+}
+
+.quiz-box {
+  background: linear-gradient(135deg, #001542, #003b92);
+  color: white;
+  padding: 30px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.quiz-content h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.quiz-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.play-btn {
+  background-color: #f6b200;
+  border: none;
+  color: #001542;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.quiz-box img {
+  width: 200px;
+  border-radius: 100%;
+}
+
+.miles-box {
+  text-align: center;
+}
+
+.miles-box p {
+  font-size: 14px;
+}
+
+.miles-box h3 {
+  font-size: 28px;
+  color: #f6b200;
+}
+
+.miles-box span {
+  font-size: 14px;
+  color: white;
+}
+
+.vr-section {
+  background: #fffbe6;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  margin: 40px auto 32px auto;
+  max-width: 77.78%;
+  padding: 32px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vr-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.vr-img {
+  width: 30%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.vr-text {
+  max-width: 60%;
+}
+
+.vr-text h2 {
+  margin: 0 0 20px 0;
+  font-size: 2rem;
+  color: #001542;
+}
+
+.vr-text p {
+  margin-bottom: 18px;
+  color: #001542;
+}
+
+.vr-btns {
+  display: flex;
+  gap: 14px;
+}
+
+.vr-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.vr-btn {
+  background: #FFD600;
+  color: #111;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.vr-btn:hover {
+  background: #ffe066;
+  color: #000;
+}
+
+/* tourism */
+
+
+.tourism-section {
+  background: #085454;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  margin: 80px auto 64px auto;
+  max-width: 77.78%;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.tourism-section h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 64px;
+  margin-bottom: 40px; /* Space below the heading */
+}
+
+.tourism-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  gap: 5%;
+  margin: 5% 0; 
+  width: 100%; 
+}
+
+.tourism-img {
+  width: 30%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.tourism-text {
+  max-width: 60%;
+  align-items: center;
+}
+
+.tourism-type-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tourism-text h2 {
+  margin: 10px 0 20px 0;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.tourism-text p {
+  margin-bottom: 18px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background: #00132e;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 40px auto 20px auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+footer div {
+  margin: 10px 0;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}

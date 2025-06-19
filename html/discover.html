@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discover - Swift</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/discover.css" />
+  <link rel="stylesheet" href="/css/menu.css">
+
+</head>
+<body>
+  <!-- Header / Menu -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="/html/home.html">Home</a>
+        <a href="/html/flights.html">Flights</a>
+      </div>
+      <img src="/assets/img/logoE.png" alt="Swift logo" class="logo">
+      <div class="nav-right">
+        <a href="/html/discover.html">Discover</a>
+        <a href="/html/review.html">Reviews</a>
+
+        <!-- ENVOLVENDO O MENU E O ÍCONE -->
+        <div class="menu-wrapper">
+          <div class="menu-icon" id="menu-icon">☰</div>
+          <div class="dropdown-menu hidden" id="dropdownMenu">
+            <ul>
+              <li>
+                <a href="/html/yourFlights.html"><span>Your Flights</span></a>
+                <img src="/assets/img/iconFlights.png" alt="Your flights icon">
+              </li>
+              <li>
+                <a href="/html/likedDestination.html"><span>Liked Destinations</span></a>
+                <img src="/assets/img/like.png" alt="Liked destinations icon">
+              </li>
+              <li>
+                <a href="/html/login.html"><span>Log in</span></a>
+                <img src="/assets/img/login.png" alt="Login icon">
+              </li>
+              <li>
+                <a href="/html/account.html"><span>Account</span></a>
+                <img src="/assets/img/people.png" alt="Account icon">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="discover-page">
+    <h1 class="title">Discover</h1>
+
+    <section class="destination paris">
+      <img src="/assets/img/parisBanner.png" alt="Paris" />
+    </section>
+
+    <section class="destination-text london">
+      <img src="/assets/img/london.png" alt="London"/>
+      <div class="text">
+        <h3>London</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </section>
+
+    <section class="quiz-section">
+      <div class="quiz-box">
+        <div class="quiz-content">
+          <h4>Quiz</h4>
+          <h2>Greece</h2>
+          <a class="play-btn" href="/html/quiz-info.html">Play</a>        </div>
+        <img src="/assets/img/greeceC.png" alt="Greece">
+        <div class="miles-box">
+          <p>Get the chance to win</p>
+          <h3>100<br><span>miles</span></h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="destination-text la">
+      <img src="/assets/img/losangelesC.png" alt="Los Angeles" />
+      <div class="text">
+        <h3>Los Angels</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </section>
+  </main>
+
+  <section class="vr-section">
+    <div class="vr-content">
+      <img src="/assets/img/VR-img.png" alt="VR Airport Guide" class="vr-img">
+      <div class="vr-text">
+        <h2>Explore an Airport in VR</h2>
+        <p>
+          Live the experience of a virtual guide through an airport! <br>
+          Discover the main spots, services, and tips for your journey in an immersive way.
+        </p>
+        <div class="vr-btns">
+          <a class="vr-btn" href="/VR/vr.html">Join VR World</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tourism-section">
+    <h2>Tourism Types</h2>
+    <div class="tourism-content">
+      <img src="/assets/img/architecture-img.jpg" alt="architecture-img" class="tourism-img">
+      <div class="tourism-text">
+        <div class="tourism-type-title">
+          <img src="/assets/img/architeture-icon.svg" alt="architecture-icon">
+          <h2>Architectural</h2>
+        </div>
+        <p>
+          <strong>Explore the world through its structures.</strong><br><br>
+          Discover iconic landmarks, ancient ruins, cutting-edge modern buildings, and the cultural stories behind them. 
+          Perfect for design lovers, history buffs, and curious travelers.
+          <br><br>
+          <b>Best for:</b> Historical cities, UNESCO sites, urban explorations.
+          <br>
+          <b>Top Spots:</b> Rome, Kyoto, Barcelona, Istanbul.
+        </p>
+      </div>
+    </div>
+    <div class="tourism-content">
+      <img src="/assets/img/food-img.jpg" alt="gastronomic-img" class="tourism-img">
+      <div class="tourism-text">
+        <div class="tourism-type-title">
+          <img src="/assets/img/gastromomic-icon.svg" alt="gastromomic-icon">
+          <h2>Gastronomic</h2>
+        </div>
+        <p>
+          <strong>Taste your way across the globe.</strong>
+          <br><br>
+          Dive into local food scenes, traditional dishes, street markets, and fine dining. Culinary experiences offer a unique window into culture.
+          <br><br>
+          <b>Best for:</b> Foodies, cooking class seekers, wine and spirits explorers.
+          <br>
+          <b>Top Spots:</b> Paris, Bangkok, Oaxaca, Tokyo.
+        </p>
+      </div>
+    </div>
+    <div class="tourism-content">
+      <img src="/assets/img//religious-img.jpg" alt="religious-img" class="tourism-img">
+      <div class="tourism-text">
+        <div class="tourism-type-title">
+          <img src="/assets/img/religious-icon.svg" alt="religious-icon">
+          <h2>Religious</h2>
+        </div>
+        <p>
+          <strong>Travel with spiritual purpose.</strong>
+          <br><br>
+          Visit sacred sites, historic places of worship, and destinations with deep spiritual meaning—whether for reflection, pilgrimage, or learning.
+          <br><br>
+          <b>Best for: </b>Pilgrims, spiritual travelers, history and culture enthusiasts.
+          <br>
+          <b>Top Spots: </b>Jerusalem, Mecca, Varanasi, Vatican City.
+        </p>
+      </div>
+    </div>
+    <div class="tourism-content">
+      <img src="/assets/img/adventure-img.jpg" alt="adventure-img" class="tourism-img">
+      <div class="tourism-text">
+        <div class="tourism-type-title">
+          <img src="/assets/img/adventure-icon.svg" alt="adventure-icon">
+          <h2>Adventure</h2>
+        </div>
+        <p>
+          <strong>Adrenaline meets the outdoors.</strong>
+          <br><br>
+          Chase thrills and explore nature through hiking, diving, ziplining, and more. Great for those seeking action, challenge, and natural beauty.
+          <br><br>
+          <b> Best for: </b>Outdoor lovers, extreme sports fans, explorers.
+          <br>
+          <b>Top Spots: </b>Queenstown, Patagonia, Costa Rica, Nepal.
+        </p>
+      </div>
+    </div>
+    <div class="tourism-content">
+      <img src="/assets/img/beach-img.jpg" alt="beach-img" class="tourism-img">
+      <div class="tourism-text">
+        <div class="tourism-type-title">
+          <img src="/assets/img/beach-icon.svg" alt="beach-icon">
+          <h2>Beaches</h2>
+        </div>
+        <p>
+          <strong>Relax, unwind, and soak up the sun.</strong>
+          <br><br>
+          Golden sands, turquoise waters, and vibrant coastal culture await. Whether it’s for surfing, snorkeling, or sipping cocktails, beaches are timeless.
+          <br><br>
+          <b>Best for: </b>Sunseekers, water sports, romantic getaways.
+          <br>
+          <b>Top Spots: </b>Maldives, Bali, Santorini, Cancun.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <img src="/assets/img/logo.png" alt="Swift logo" class="logo">
+    <div>Email: <p>caldas@swift.com</p></div>
+    <div>Location: <p>Porto</p></div>
+    <div>Contact: <p>+351 903510863</p></div>
+  </footer>
+
+  <script src="/js/views/MenuViews.js"></script>
+  
+</body>
+</html>

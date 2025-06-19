@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/adminUsers.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100">
+  <header class="flex items-center justify-between px-6 py-4 bg-white shadow-md">
+    <div class="logo">
+      <img src="/assets/img/logoE.png" alt="Swift Logo">
+    </div>
+    <nav class="space-x-6">
+      <a href="adminDashboard.html" class="text-gray-600 hover:text-black">Dashboard</a>
+      <a href="adminUsers.html" class="text-gray-600 hover:text-black">Users</a>
+      <button id="logoutTopBtn" class="text-white bg-red-600 hover:bg-red-700 px-4 py-1 rounded ml-4">
+        Logout
+      </button>
+    </nav>
+  </header>
+
+  <main class="p-6">
+    <h1 class="text-3xl font-bold mb-6">Dashboard</h1>
+
+    <!-- Gráfico ocupa toda a largura -->
+    <div class="p-4 bg-white rounded-lg shadow w-full">
+      <canvas id="salesChart"></canvas>
+      <div class="mt-4 flex justify-end">
+        <span class="px-4 py-2 bg-blue-600 text-white rounded">All Time</span>
+      </div>
+    </div>
+
+    <!-- Secção inferior (ofertas e quizzes) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+      <div class="p-4 bg-white rounded-lg shadow flex justify-between items-center">
+        <span class="text-lg font-semibold">Best Offers</span>
+        <a href="#" class="text-blue-600">&gt;</a>
+      </div>
+      <div class="p-4 bg-white rounded-lg shadow flex justify-between items-center">
+        <span class="text-lg font-semibold">Manage Quizzes</span>
+        <a href="/html/manageQuizzes.html" class="text-blue-600">&gt;</a>
+      </div>
+    </div>
+
+    <!-- Lista de países -->
+    <div class="mt-6 p-4 bg-white rounded-lg shadow">
+      <h2 class="text-xl font-bold mb-4">Customers demographics</h2>
+      <ul id="countryList">
+        <!-- JS vai preencher aqui -->
+      </ul>
+    </div>
+  </main>
+
+  <footer class="mt-6 bg-blue-900 text-white p-4 flex justify-between">
+    <div><strong>Swift</strong></div>
+    <div>Email: caldas@swift.com</div>
+    <div>Location: Porto</div>
+    <div>Contact: +351 930513083</div>
+  </footer>
+
+  <!-- Script de tracking e gráfico -->
+  <script type="module" src="/js/views/dashboard-visits.js"></script>
+</body>
+</html>

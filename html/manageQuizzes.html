@@ -1,0 +1,54 @@
+<!-- manageQuizzes.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manage Quizzes - Admin</title>
+  <script defer src="/js/views/manageQuizzes.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="p-10 bg-gray-100 text-gray-800">
+  <h1 class="text-2xl font-bold mb-6">Manage Quizzes</h1>
+
+  
+<form id="quizForm" class="bg-white p-6 rounded shadow-md max-w-xl">
+  <div class="mb-4">
+    <label class="block font-medium mb-1">Country</label>
+    <select id="destination" class="w-full border border-gray-300 rounded p-2" required>
+  <option value="">-- Select a country --</option>
+</select>
+  </div>
+
+  <div class="mb-4">
+        <label class="block font-medium mb-1">Question</label>
+        <input type="text" id="question" class="w-full border border-gray-300 rounded p-2" required />
+      </div>
+
+      <div class="mb-4">
+        <label class="block font-medium mb-1">Correct Answer</label>
+        <input type="text" id="correctAnswer" class="w-full border border-green-400 rounded p-2" required />
+      </div>
+
+      <div class="mb-4">
+        <label class="block font-medium mb-1">Wrong Answer 1</label>
+        <input type="text" class="w-full border border-red-400 rounded p-2 wrong" required />
+      </div>
+      <div class="mb-4">
+        <label class="block font-medium mb-1">Wrong Answer 2</label>
+        <input type="text" class="w-full border border-red-400 rounded p-2 wrong" required />
+      </div>
+      <div class="mb-4">
+        <label class="block font-medium mb-1">Wrong Answer 3</label>
+        <input type="text" class="w-full border border-red-400 rounded p-2 wrong" required />
+      </div>
+
+  <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+    Add Quiz
+  </button>
+</form>
+
+  <div id="quizList" class="mt-10">
+    <!-- quizzes adicionados aparecerão aqui -->
+  </div>
+</body>
+</html>
