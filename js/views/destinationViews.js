@@ -61,6 +61,10 @@ const destinationData = {
     image: "/assets/img/barcelona.png",
     description: "Coastal city with Gaudí architecture and sunny beaches.",
   },
+  NewYork: {
+  image: "/assets/img/newyork.png",
+  description: "The city that never sleeps. Explore Times Square, Central Park and more."
+}
 };
 
 const card = document.getElementById("destination-card");
