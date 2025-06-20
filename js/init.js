@@ -1,404 +1,41 @@
-
 function initData() {
-  // USERS
-  if (!localStorage.users) {
-    const users = [
-  {
-    "userId": "u1",
-    "username": "alice.smith",
-    "password": "pass1",
-    "email": "alice.smith@example.com",
-    "coverPhoto": "https://example.com/users/alice.smith.jpg",
-    "birthDate": "1996-04-03",
-    "phoneNumber": "+351976058519",
-    "defaultPaymentMethod": "PayPal",
-    "gender": "Other",
-    "quizzes": [
-      {
-        "idQuiz": "q1",
-        "correctAnswers": 1,
-        "quizMiles": 20
-      }
-    ]
-  },
-  {
-    "userId": "u2",
-    "username": "bob.johnson",
-    "password": "pass2",
-    "email": "bob.johnson@example.com",
-    "coverPhoto": "https://example.com/users/bob.johnson.jpg",
-    "birthDate": "1983-03-18",
-    "phoneNumber": "+351940376335",
-    "defaultPaymentMethod": "PayPal",
-    "gender": "Other",
-    "quizzes": [
-      {
-        "idQuiz": "q2",
-        "correctAnswers": 8,
-        "quizMiles": 17
-      }
-    ]
-  },
-  {
-    "userId": "u3",
-    "username": "charlie.brown",
-    "password": "pass3",
-    "email": "charlie.brown@example.com",
-    "coverPhoto": "https://example.com/users/charlie.brown.jpg",
-    "birthDate": "1990-02-25",
-    "phoneNumber": "+351936234043",
-    "defaultPaymentMethod": "Revolut",
-    "gender": "Female",
-    "quizzes": [
-      {
-        "idQuiz": "q3",
-        "correctAnswers": 4,
-        "quizMiles": 43
-      }
-    ]
-  },
-  {
-    "userId": "u4",
-    "username": "diana.taylor",
-    "password": "pass4",
-    "email": "diana.taylor@example.com",
-    "coverPhoto": "https://example.com/users/diana.taylor.jpg",
-    "birthDate": "2000-08-03",
-    "phoneNumber": "+351944865616",
-    "defaultPaymentMethod": "Revolut",
-    "gender": "Female",
-    "quizzes": [
-      {
-        "idQuiz": "q4",
-        "correctAnswers": 7,
-        "quizMiles": 61
-      }
-    ]
-  },
-  {
-    "userId": "u5",
-    "username": "ethan.anderson",
-    "password": "pass5",
-    "email": "ethan.anderson@example.com",
-    "coverPhoto": "https://example.com/users/ethan.anderson.jpg",
-    "birthDate": "1981-04-13",
-    "phoneNumber": "+351911746601",
-    "defaultPaymentMethod": "PayPal",
-    "gender": "Male",
-    "quizzes": [
-      {
-        "idQuiz": "q5",
-        "correctAnswers": 2,
-        "quizMiles": 76
-      }
-    ]
-  },
-  {
-    "userId": "u6",
-    "username": "fiona.thomas",
-    "password": "pass6",
-    "email": "fiona.thomas@example.com",
-    "coverPhoto": "https://example.com/users/fiona.thomas.jpg",
-    "birthDate": "1990-03-30",
-    "phoneNumber": "+351951442377",
-    "defaultPaymentMethod": "Visa",
-    "gender": "Male",
-    "quizzes": [
-      {
-        "idQuiz": "q6",
-        "correctAnswers": 5,
-        "quizMiles": 98
-      }
-    ]
-  },
-  {
-    "userId": "u7",
-    "username": "george.jackson",
-    "password": "pass7",
-    "email": "george.jackson@example.com",
-    "coverPhoto": "https://example.com/users/george.jackson.jpg",
-    "birthDate": "1983-10-07",
-    "phoneNumber": "+351949537739",
-    "defaultPaymentMethod": "Visa",
-    "gender": "Male",
-    "quizzes": [
-      {
-        "idQuiz": "q7",
-        "correctAnswers": 4,
-        "quizMiles": 100
-      }
-    ]
-  },
-  {
-    "userId": "u8",
-    "username": "hannah.white",
-    "password": "pass8",
-    "email": "hannah.white@example.com",
-    "coverPhoto": "https://example.com/users/hannah.white.jpg",
-    "birthDate": "1991-01-18",
-    "phoneNumber": "+351983133534",
-    "defaultPaymentMethod": "Revolut",
-    "gender": "Male",
-    "quizzes": [
-      {
-        "idQuiz": "q8",
-        "correctAnswers": 7,
-        "quizMiles": 87
-      }
-    ]
-  },
-  {
-    "userId": "u9",
-    "username": "ian.harris",
-    "password": "pass9",
-    "email": "ian.harris@example.com",
-    "coverPhoto": "https://example.com/users/ian.harris.jpg",
-    "birthDate": "1994-01-31",
-    "phoneNumber": "+351923781706",
-    "defaultPaymentMethod": "Visa",
-    "gender": "Male",
-    "quizzes": [
-      {
-        "idQuiz": "q9",
-        "correctAnswers": 9,
-        "quizMiles": 28
-      }
-    ]
-  },
-  {
-    "userId": "u10",
-    "username": "julia.martin",
-    "password": "pass10",
-    "email": "julia.martin@example.com",
-    "coverPhoto": "https://example.com/users/julia.martin.jpg",
-    "birthDate": "2001-02-20",
-    "phoneNumber": "+351941111633",
-    "defaultPaymentMethod": "Revolut",
-    "gender": "Male",
-    "quizzes": [
-      {
-        "idQuiz": "q10",
-        "correctAnswers": 5,
-        "quizMiles": 18
-      }
-    ]
-  },
-  {
-    "userId": "u11",
-    "username": "kevin.walker",
-    "password": "pass11",
-    "email": "kevin.walker@example.com",
-    "coverPhoto": "https://example.com/users/kevin.walker.jpg",
-    "birthDate": "1982-08-27",
-    "phoneNumber": "+351954586468",
-    "defaultPaymentMethod": "Mastercard",
-    "gender": "Male",
-    "quizzes": [
-      {
-        "idQuiz": "q11",
-        "correctAnswers": 5,
-        "quizMiles": 37
-      }
-    ]
-  },
-  {
-    "userId": "u12",
-    "username": "laura.young",
-    "password": "pass12",
-    "email": "laura.young@example.com",
-    "coverPhoto": "https://example.com/users/laura.young.jpg",
-    "birthDate": "1989-10-04",
-    "phoneNumber": "+351971550814",
-    "defaultPaymentMethod": "PayPal",
-    "gender": "Female",
-    "quizzes": [
-      {
-        "idQuiz": "q12",
-        "correctAnswers": 7,
-        "quizMiles": 77
-      }
-    ]
-  },
-  {
-    "userId": "u13",
-    "username": "martin.allen",
-    "password": "pass13",
-    "email": "martin.allen@example.com",
-    "coverPhoto": "https://example.com/users/martin.allen.jpg",
-    "birthDate": "1980-08-21",
-    "phoneNumber": "+351941353333",
-    "defaultPaymentMethod": "Visa",
-    "gender": "Male",
-    "quizzes": [
-      {
-        "idQuiz": "q13",
-        "correctAnswers": 9,
-        "quizMiles": 94
-      }
-    ]
-  },
-  {
-    "userId": "u14",
-    "username": "nina.king",
-    "password": "pass14",
-    "email": "nina.king@example.com",
-    "coverPhoto": "https://example.com/users/nina.king.jpg",
-    "birthDate": "1999-10-31",
-    "phoneNumber": "+351973377429",
-    "defaultPaymentMethod": "Mastercard",
-    "gender": "Female",
-    "quizzes": [
-      {
-        "idQuiz": "q14",
-        "correctAnswers": 4,
-        "quizMiles": 62
-      }
-    ]
-  },
-  {
-    "userId": "u15",
-    "username": "oscar.wright",
-    "password": "pass15",
-    "email": "oscar.wright@example.com",
-    "coverPhoto": "https://example.com/users/oscar.wright.jpg",
-    "birthDate": "1999-01-24",
-    "phoneNumber": "+351921624824",
-    "defaultPaymentMethod": "Revolut",
-    "gender": "Male",
-    "quizzes": [
-      {
-        "idQuiz": "q15",
-        "correctAnswers": 6,
-        "quizMiles": 32
-      }
-    ]
-  },
-  {
-    "userId": "u16",
-    "username": "paula.scott",
-    "password": "pass16",
-    "email": "paula.scott@example.com",
-    "coverPhoto": "https://example.com/users/paula.scott.jpg",
-    "birthDate": "1996-03-22",
-    "phoneNumber": "+351927519546",
-    "defaultPaymentMethod": "Visa",
-    "gender": "Other",
-    "quizzes": [
-      {
-        "idQuiz": "q16",
-        "correctAnswers": 2,
-        "quizMiles": 36
-      }
-    ]
-  },
-  {
-    "userId": "u17",
-    "username": "quinn.green",
-    "password": "pass17",
-    "email": "quinn.green@example.com",
-    "coverPhoto": "https://example.com/users/quinn.green.jpg",
-    "birthDate": "1999-02-27",
-    "phoneNumber": "+351931683598",
-    "defaultPaymentMethod": "Mastercard",
-    "gender": "Male",
-    "quizzes": [
-      {
-        "idQuiz": "q17",
-        "correctAnswers": 8,
-        "quizMiles": 83
-      }
-    ]
-  },
-  {
-    "userId": "u18",
-    "username": "rachel.adams",
-    "password": "pass18",
-    "email": "rachel.adams@example.com",
-    "coverPhoto": "https://example.com/users/rachel.adams.jpg",
-    "birthDate": "1992-02-25",
-    "phoneNumber": "+351926866878",
-    "defaultPaymentMethod": "Revolut",
-    "gender": "Other",
-    "quizzes": [
-      {
-        "idQuiz": "q18",
-        "correctAnswers": 5,
-        "quizMiles": 45
-      }
-    ]
-  },
-  {
-    "userId": "u19",
-    "username": "sam.baker",
-    "password": "pass19",
-    "email": "sam.baker@example.com",
-    "coverPhoto": "https://example.com/users/sam.baker.jpg",
-    "birthDate": "2002-11-30",
-    "phoneNumber": "+351919753606",
-    "defaultPaymentMethod": "Visa",
-    "gender": "Other",
-    "quizzes": [
-      {
-        "idQuiz": "q19",
-        "correctAnswers": 5,
-        "quizMiles": 59
-      }
-    ]
-  },
-  {
-    "userId": "u20",
-    "username": "tina.carter",
-    "password": "pass20",
-    "email": "tina.carter@example.com",
-    "coverPhoto": "https://example.com/users/tina.carter.jpg",
-    "birthDate": "2003-05-25",
-    "phoneNumber": "+351922522054",
-    "defaultPaymentMethod": "Mastercard",
-    "gender": "Female",
-    "quizzes": [
-      {
-        "idQuiz": "q20",
-        "correctAnswers": 2,
-        "quizMiles": 98
-      }
-    ]
-  }
-];
-    localStorage.setItem("users", JSON.stringify(users));
-  }
-
   // DESTINATIONS
   if (!localStorage.destinations) {
     const destinations = [
   {
     "idDestination": "d1",
-    "tourism": ["architectural", "gastronomic", "beaches"],
-"name": "Lisbon",
+    "destinationInfo": "Lisbon is a wonderful European city known for its rich culture and history.",
+    "name": "Lisbon",
     "flights": [
       {
-        "airCompany": "easyJet",
-        "price": 302.82,
+        "airCompany": "Ryanair",
+        "price": 386.62,
+        "date": "2025-07-01",
+        "remainingEconomySeats": 170,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Lisbon Airport",
         "flightTime": "0h 55m"
       },
       {
-        "airCompany": "Ryanair",
-        "price": 56.53,
+        "airCompany": "British Airways",
+        "price": 368.82,
+        "date": "2025-09-08",
+        "remainingEconomySeats": 113,
+        "remainingBusinessSeats": 28,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Lisbon Airport",
         "flightTime": "0h 55m"
       },
       {
-        "airCompany": "Ryanair",
-        "price": 266.77,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Lisbon Airport",
-        "flightTime": "0h 55m"
-      },
-      {
-        "airCompany": "Ryanair",
-        "price": 353.09,
+        "airCompany": "TAP Air Portugal",
+        "price": 433.25,
+        "date": "2025-08-31",
+        "remainingEconomySeats": 137,
+        "remainingBusinessSeats": 25,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Lisbon Airport",
         "flightTime": "0h 55m"
@@ -407,40 +44,49 @@ function initData() {
   },
   {
     "idDestination": "d2",
-    "tourism": ["architectural", "gastronomic", "religious"],
-"name": "Paris",
+    "destinationInfo": "Paris is a wonderful European city known for its rich culture and history.",
+    "name": "Paris",
     "flights": [
       {
-        "airCompany": "TAP Air Portugal",
-        "price": 331.88,
+        "airCompany": "Ryanair",
+        "price": 363.85,
+        "date": "2025-07-05",
+        "remainingEconomySeats": 106,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Paris Airport",
+        "flightTime": "2h 10m"
+      },
+      {
+        "airCompany": "Ryanair",
+        "price": 310.77,
+        "date": "2025-07-08",
+        "remainingEconomySeats": 175,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Paris Airport",
         "flightTime": "2h 10m"
       },
       {
         "airCompany": "easyJet",
-        "price": 130.4,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Paris Airport",
-        "flightTime": "2h 10m"
-      },
-      {
-        "airCompany": "easyJet",
-        "price": 72.87,
+        "price": 258.89,
+        "date": "2025-07-11",
+        "remainingEconomySeats": 114,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Paris Airport",
         "flightTime": "2h 10m"
       },
       {
         "airCompany": "British Airways",
-        "price": 158.66,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Paris Airport",
-        "flightTime": "2h 10m"
-      },
-      {
-        "airCompany": "easyJet",
-        "price": 317.23,
+        "price": 236.84,
+        "date": "2025-08-22",
+        "remainingEconomySeats": 130,
+        "remainingBusinessSeats": 18,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Paris Airport",
         "flightTime": "2h 10m"
@@ -449,40 +95,49 @@ function initData() {
   },
   {
     "idDestination": "d3",
-    "tourism": ["religious", "architectural", "gastronomic"],
-"name": "Rome",
+    "destinationInfo": "Rome is a wonderful European city known for its rich culture and history.",
+    "name": "Rome",
     "flights": [
       {
         "airCompany": "TAP Air Portugal",
-        "price": 144.48,
+        "price": 40.17,
+        "date": "2025-08-12",
+        "remainingEconomySeats": 123,
+        "remainingBusinessSeats": 30,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Rome Airport",
         "flightTime": "3h 0m"
       },
       {
-        "airCompany": "British Airways",
-        "price": 78.71,
+        "airCompany": "TAP Air Portugal",
+        "price": 307.72,
+        "date": "2025-08-21",
+        "remainingEconomySeats": 171,
+        "remainingBusinessSeats": 11,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Rome Airport",
         "flightTime": "3h 0m"
       },
       {
         "airCompany": "Ryanair",
-        "price": 204.15,
+        "price": 163.11,
+        "date": "2025-08-03",
+        "remainingEconomySeats": 117,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Rome Airport",
         "flightTime": "3h 0m"
       },
       {
         "airCompany": "British Airways",
-        "price": 262.56,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Rome Airport",
-        "flightTime": "3h 0m"
-      },
-      {
-        "airCompany": "British Airways",
-        "price": 328.31,
+        "price": 227.57,
+        "date": "2025-08-04",
+        "remainingEconomySeats": 107,
+        "remainingBusinessSeats": 11,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Rome Airport",
         "flightTime": "3h 0m"
@@ -491,26 +146,60 @@ function initData() {
   },
   {
     "idDestination": "d4",
-    "tourism": ["architectural", "adventure"],
-"name": "Berlin",
+    "destinationInfo": "Berlin is a wonderful European city known for its rich culture and history.",
+    "name": "Berlin",
     "flights": [
       {
+        "airCompany": "easyJet",
+        "price": 237.63,
+        "date": "2025-08-02",
+        "remainingEconomySeats": 114,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Berlin Airport",
+        "flightTime": "3h 0m"
+      },
+      {
         "airCompany": "TAP Air Portugal",
-        "price": 345.08,
+        "price": 291.85,
+        "date": "2025-07-29",
+        "remainingEconomySeats": 137,
+        "remainingBusinessSeats": 28,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Berlin Airport",
+        "flightTime": "3h 0m"
+      },
+      {
+        "airCompany": "TAP Air Portugal",
+        "price": 232.07,
+        "date": "2025-06-25",
+        "remainingEconomySeats": 169,
+        "remainingBusinessSeats": 24,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Berlin Airport",
+        "flightTime": "3h 0m"
+      },
+      {
+        "airCompany": "British Airways",
+        "price": 402.88,
+        "date": "2025-09-03",
+        "remainingEconomySeats": 109,
+        "remainingBusinessSeats": 23,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Berlin Airport",
         "flightTime": "3h 0m"
       },
       {
         "airCompany": "Ryanair",
-        "price": 262.6,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Berlin Airport",
-        "flightTime": "3h 0m"
-      },
-      {
-        "airCompany": "Ryanair",
-        "price": 182.27,
+        "price": 290.31,
+        "date": "2025-08-21",
+        "remainingEconomySeats": 123,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Berlin Airport",
         "flightTime": "3h 0m"
@@ -519,40 +208,60 @@ function initData() {
   },
   {
     "idDestination": "d5",
-    "tourism": ["architectural", "gastronomic"],
-"name": "Madrid",
+    "destinationInfo": "Madrid is a wonderful European city known for its rich culture and history.",
+    "name": "Madrid",
     "flights": [
       {
         "airCompany": "British Airways",
-        "price": 224.68,
+        "price": 374.42,
+        "date": "2025-07-30",
+        "remainingEconomySeats": 139,
+        "remainingBusinessSeats": 20,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Madrid Airport",
+        "flightTime": "1h 20m"
+      },
+      {
+        "airCompany": "British Airways",
+        "price": 214.78,
+        "date": "2025-06-20",
+        "remainingEconomySeats": 121,
+        "remainingBusinessSeats": 21,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Madrid Airport",
         "flightTime": "1h 20m"
       },
       {
         "airCompany": "easyJet",
-        "price": 78.98,
+        "price": 294.44,
+        "date": "2025-08-12",
+        "remainingEconomySeats": 129,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Madrid Airport",
         "flightTime": "1h 20m"
       },
       {
-        "airCompany": "British Airways",
-        "price": 30.98,
+        "airCompany": "easyJet",
+        "price": 43.5,
+        "date": "2025-08-01",
+        "remainingEconomySeats": 113,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Madrid Airport",
         "flightTime": "1h 20m"
       },
       {
-        "airCompany": "TAP Air Portugal",
-        "price": 434.65,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Madrid Airport",
-        "flightTime": "1h 20m"
-      },
-      {
-        "airCompany": "Ryanair",
-        "price": 300.99,
+        "airCompany": "easyJet",
+        "price": 212.05,
+        "date": "2025-08-13",
+        "remainingEconomySeats": 165,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Madrid Airport",
         "flightTime": "1h 20m"
@@ -561,26 +270,60 @@ function initData() {
   },
   {
     "idDestination": "d6",
-    "tourism": ["architectural", "religious"],
-"name": "Vienna",
+    "destinationInfo": "Vienna is a wonderful European city known for its rich culture and history.",
+    "name": "Vienna",
     "flights": [
       {
-        "airCompany": "TAP Air Portugal",
-        "price": 165.96,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Vienna Airport",
-        "flightTime": "3h 0m"
-      },
-      {
         "airCompany": "British Airways",
-        "price": 364.83,
+        "price": 397.61,
+        "date": "2025-07-30",
+        "remainingEconomySeats": 150,
+        "remainingBusinessSeats": 10,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Vienna Airport",
         "flightTime": "3h 0m"
       },
       {
         "airCompany": "TAP Air Portugal",
-        "price": 44.53,
+        "price": 401.49,
+        "date": "2025-09-03",
+        "remainingEconomySeats": 131,
+        "remainingBusinessSeats": 20,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Vienna Airport",
+        "flightTime": "3h 0m"
+      },
+      {
+        "airCompany": "easyJet",
+        "price": 411.63,
+        "date": "2025-09-02",
+        "remainingEconomySeats": 174,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Vienna Airport",
+        "flightTime": "3h 0m"
+      },
+      {
+        "airCompany": "TAP Air Portugal",
+        "price": 199.85,
+        "date": "2025-07-25",
+        "remainingEconomySeats": 156,
+        "remainingBusinessSeats": 20,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Vienna Airport",
+        "flightTime": "3h 0m"
+      },
+      {
+        "airCompany": "TAP Air Portugal",
+        "price": 287.31,
+        "date": "2025-07-25",
+        "remainingEconomySeats": 150,
+        "remainingBusinessSeats": 27,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Vienna Airport",
         "flightTime": "3h 0m"
@@ -589,40 +332,60 @@ function initData() {
   },
   {
     "idDestination": "d7",
-    "tourism": ["architectural", "adventure", "gastronomic"],
-"name": "Amsterdam",
+    "destinationInfo": "Amsterdam is a wonderful European city known for its rich culture and history.",
+    "name": "Amsterdam",
     "flights": [
       {
+        "airCompany": "Ryanair",
+        "price": 415.34,
+        "date": "2025-07-21",
+        "remainingEconomySeats": 111,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Amsterdam Airport",
+        "flightTime": "2h 30m"
+      },
+      {
+        "airCompany": "easyJet",
+        "price": 325.82,
+        "date": "2025-08-31",
+        "remainingEconomySeats": 148,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Amsterdam Airport",
+        "flightTime": "2h 30m"
+      },
+      {
         "airCompany": "British Airways",
-        "price": 90.95,
+        "price": 71.94,
+        "date": "2025-06-28",
+        "remainingEconomySeats": 104,
+        "remainingBusinessSeats": 25,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Amsterdam Airport",
         "flightTime": "2h 30m"
       },
       {
         "airCompany": "TAP Air Portugal",
-        "price": 162.08,
+        "price": 405.65,
+        "date": "2025-06-28",
+        "remainingEconomySeats": 164,
+        "remainingBusinessSeats": 10,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Amsterdam Airport",
         "flightTime": "2h 30m"
       },
       {
-        "airCompany": "British Airways",
-        "price": 122.56,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Amsterdam Airport",
-        "flightTime": "2h 30m"
-      },
-      {
-        "airCompany": "British Airways",
-        "price": 188.98,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Amsterdam Airport",
-        "flightTime": "2h 30m"
-      },
-      {
-        "airCompany": "TAP Air Portugal",
-        "price": 373.88,
+        "airCompany": "easyJet",
+        "price": 387.25,
+        "date": "2025-07-22",
+        "remainingEconomySeats": 164,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Amsterdam Airport",
         "flightTime": "2h 30m"
@@ -631,26 +394,60 @@ function initData() {
   },
   {
     "idDestination": "d8",
-    "tourism": ["architectural", "religious"],
-"name": "Prague",
+    "destinationInfo": "Prague is a wonderful European city known for its rich culture and history.",
+    "name": "Prague",
     "flights": [
       {
-        "airCompany": "easyJet",
-        "price": 310.16,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Prague Airport",
-        "flightTime": "3h 0m"
-      },
-      {
         "airCompany": "British Airways",
-        "price": 320.59,
+        "price": 103.72,
+        "date": "2025-06-23",
+        "remainingEconomySeats": 177,
+        "remainingBusinessSeats": 29,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Prague Airport",
         "flightTime": "3h 0m"
       },
       {
-        "airCompany": "easyJet",
-        "price": 248.67,
+        "airCompany": "Ryanair",
+        "price": 168.58,
+        "date": "2025-08-14",
+        "remainingEconomySeats": 114,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Prague Airport",
+        "flightTime": "3h 0m"
+      },
+      {
+        "airCompany": "Ryanair",
+        "price": 163.91,
+        "date": "2025-08-20",
+        "remainingEconomySeats": 126,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Prague Airport",
+        "flightTime": "3h 0m"
+      },
+      {
+        "airCompany": "TAP Air Portugal",
+        "price": 65.01,
+        "date": "2025-08-02",
+        "remainingEconomySeats": 131,
+        "remainingBusinessSeats": 12,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Prague Airport",
+        "flightTime": "3h 0m"
+      },
+      {
+        "airCompany": "TAP Air Portugal",
+        "price": 310.5,
+        "date": "2025-06-14",
+        "remainingEconomySeats": 133,
+        "remainingBusinessSeats": 29,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Prague Airport",
         "flightTime": "3h 0m"
@@ -659,40 +456,60 @@ function initData() {
   },
   {
     "idDestination": "d9",
-    "tourism": ["architectural", "adventure"],
-"name": "Budapest",
+    "destinationInfo": "Budapest is a wonderful European city known for its rich culture and history.",
+    "name": "Budapest",
     "flights": [
       {
-        "airCompany": "easyJet",
-        "price": 54.38,
+        "airCompany": "TAP Air Portugal",
+        "price": 303.56,
+        "date": "2025-09-03",
+        "remainingEconomySeats": 297,
+        "remainingBusinessSeats": 31,
+        "remainingFirstSeats": 11,
         "departureAirport": "Porto",
         "arrivalAirport": "Budapest Airport",
         "flightTime": "3h 10m"
       },
       {
         "airCompany": "British Airways",
-        "price": 214.09,
+        "price": 70.39,
+        "date": "2025-08-07",
+        "remainingEconomySeats": 201,
+        "remainingBusinessSeats": 49,
+        "remainingFirstSeats": 10,
         "departureAirport": "Porto",
         "arrivalAirport": "Budapest Airport",
         "flightTime": "3h 10m"
       },
       {
         "airCompany": "British Airways",
-        "price": 254.5,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Budapest Airport",
-        "flightTime": "3h 10m"
-      },
-      {
-        "airCompany": "British Airways",
-        "price": 108.65,
+        "price": 188.19,
+        "date": "2025-07-29",
+        "remainingEconomySeats": 230,
+        "remainingBusinessSeats": 41,
+        "remainingFirstSeats": 13,
         "departureAirport": "Porto",
         "arrivalAirport": "Budapest Airport",
         "flightTime": "3h 10m"
       },
       {
         "airCompany": "TAP Air Portugal",
-        "price": 120.87,
+        "price": 49.64,
+        "date": "2025-07-23",
+        "remainingEconomySeats": 244,
+        "remainingBusinessSeats": 36,
+        "remainingFirstSeats": 10,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Budapest Airport",
+        "flightTime": "3h 10m"
+      },
+      {
+        "airCompany": "TAP Air Portugal",
+        "price": 161.21,
+        "date": "2025-07-12",
+        "remainingEconomySeats": 296,
+        "remainingBusinessSeats": 24,
+        "remainingFirstSeats": 20,
         "departureAirport": "Porto",
         "arrivalAirport": "Budapest Airport",
         "flightTime": "3h 10m"
@@ -701,26 +518,49 @@ function initData() {
   },
   {
     "idDestination": "d10",
-    "tourism": ["beaches", "architectural", "gastronomic"],
-"name": "Barcelona",
+    "destinationInfo": "Barcelona is a wonderful European city known for its rich culture and history.",
+    "name": "Barcelona",
     "flights": [
       {
         "airCompany": "easyJet",
-        "price": 332.43,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Barcelona Airport",
-        "flightTime": "1h 30m"
-      },
-      {
-        "airCompany": "British Airways",
-        "price": 235.98,
+        "price": 353.01,
+        "date": "2025-07-08",
+        "remainingEconomySeats": 176,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Barcelona Airport",
         "flightTime": "1h 30m"
       },
       {
         "airCompany": "Ryanair",
-        "price": 182.9,
+        "price": 266.89,
+        "date": "2025-07-08",
+        "remainingEconomySeats": 146,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Barcelona Airport",
+        "flightTime": "1h 30m"
+      },
+      {
+        "airCompany": "Ryanair",
+        "price": 66.8,
+        "date": "2025-06-25",
+        "remainingEconomySeats": 179,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Barcelona Airport",
+        "flightTime": "1h 30m"
+      },
+      {
+        "airCompany": "easyJet",
+        "price": 208.52,
+        "date": "2025-06-15",
+        "remainingEconomySeats": 171,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Barcelona Airport",
         "flightTime": "1h 30m"
@@ -729,40 +569,60 @@ function initData() {
   },
   {
     "idDestination": "d11",
-    "tourism": ["architectural", "adventure"],
-"name": "Copenhagen",
+    "destinationInfo": "Copenhagen is a wonderful European city known for its rich culture and history.",
+    "name": "Copenhagen",
     "flights": [
       {
-        "airCompany": "TAP Air Portugal",
-        "price": 190.55,
+        "airCompany": "Ryanair",
+        "price": 336.16,
+        "date": "2025-09-04",
+        "remainingEconomySeats": 102,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Copenhagen Airport",
         "flightTime": "3h 10m"
       },
       {
         "airCompany": "British Airways",
-        "price": 156.71,
+        "price": 76.46,
+        "date": "2025-09-08",
+        "remainingEconomySeats": 207,
+        "remainingBusinessSeats": 30,
+        "remainingFirstSeats": 12,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Copenhagen Airport",
+        "flightTime": "3h 10m"
+      },
+      {
+        "airCompany": "Ryanair",
+        "price": 117.87,
+        "date": "2025-06-18",
+        "remainingEconomySeats": 116,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Copenhagen Airport",
         "flightTime": "3h 10m"
       },
       {
         "airCompany": "TAP Air Portugal",
-        "price": 238.92,
+        "price": 427.62,
+        "date": "2025-08-09",
+        "remainingEconomySeats": 208,
+        "remainingBusinessSeats": 35,
+        "remainingFirstSeats": 13,
         "departureAirport": "Porto",
         "arrivalAirport": "Copenhagen Airport",
         "flightTime": "3h 10m"
       },
       {
         "airCompany": "British Airways",
-        "price": 171.32,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Copenhagen Airport",
-        "flightTime": "3h 10m"
-      },
-      {
-        "airCompany": "easyJet",
-        "price": 395.89,
+        "price": 373.36,
+        "date": "2025-06-19",
+        "remainingEconomySeats": 273,
+        "remainingBusinessSeats": 35,
+        "remainingFirstSeats": 19,
         "departureAirport": "Porto",
         "arrivalAirport": "Copenhagen Airport",
         "flightTime": "3h 10m"
@@ -771,33 +631,49 @@ function initData() {
   },
   {
     "idDestination": "d12",
-    "tourism": ["architectural", "adventure"],
-"name": "Stockholm",
+    "destinationInfo": "Stockholm is a wonderful European city known for its rich culture and history.",
+    "name": "Stockholm",
     "flights": [
       {
-        "airCompany": "Ryanair",
-        "price": 220.42,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Stockholm Airport",
-        "flightTime": "3h 30m"
-      },
-      {
-        "airCompany": "British Airways",
-        "price": 416.61,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Stockholm Airport",
-        "flightTime": "3h 30m"
-      },
-      {
-        "airCompany": "British Airways",
-        "price": 230.69,
+        "airCompany": "TAP Air Portugal",
+        "price": 252.3,
+        "date": "2025-07-14",
+        "remainingEconomySeats": 205,
+        "remainingBusinessSeats": 32,
+        "remainingFirstSeats": 12,
         "departureAirport": "Porto",
         "arrivalAirport": "Stockholm Airport",
         "flightTime": "3h 30m"
       },
       {
         "airCompany": "TAP Air Portugal",
-        "price": 51.8,
+        "price": 177.79,
+        "date": "2025-07-08",
+        "remainingEconomySeats": 243,
+        "remainingBusinessSeats": 27,
+        "remainingFirstSeats": 17,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Stockholm Airport",
+        "flightTime": "3h 30m"
+      },
+      {
+        "airCompany": "British Airways",
+        "price": 429.29,
+        "date": "2025-09-02",
+        "remainingEconomySeats": 252,
+        "remainingBusinessSeats": 42,
+        "remainingFirstSeats": 18,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Stockholm Airport",
+        "flightTime": "3h 30m"
+      },
+      {
+        "airCompany": "TAP Air Portugal",
+        "price": 400.18,
+        "date": "2025-09-07",
+        "remainingEconomySeats": 267,
+        "remainingBusinessSeats": 50,
+        "remainingFirstSeats": 18,
         "departureAirport": "Porto",
         "arrivalAirport": "Stockholm Airport",
         "flightTime": "3h 30m"
@@ -806,33 +682,60 @@ function initData() {
   },
   {
     "idDestination": "d13",
-    "tourism": ["gastronomic", "architectural"],
-"name": "Dublin",
+    "destinationInfo": "Dublin is a wonderful European city known for its rich culture and history.",
+    "name": "Dublin",
     "flights": [
       {
-        "airCompany": "Ryanair",
-        "price": 180.95,
+        "airCompany": "easyJet",
+        "price": 110.3,
+        "date": "2025-06-19",
+        "remainingEconomySeats": 116,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Dublin Airport",
         "flightTime": "2h 30m"
       },
       {
         "airCompany": "easyJet",
-        "price": 241.37,
+        "price": 123.53,
+        "date": "2025-06-21",
+        "remainingEconomySeats": 104,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Dublin Airport",
         "flightTime": "2h 30m"
       },
       {
-        "airCompany": "British Airways",
-        "price": 51.89,
+        "airCompany": "TAP Air Portugal",
+        "price": 286.31,
+        "date": "2025-07-13",
+        "remainingEconomySeats": 105,
+        "remainingBusinessSeats": 25,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Dublin Airport",
         "flightTime": "2h 30m"
       },
       {
-        "airCompany": "British Airways",
-        "price": 199.38,
+        "airCompany": "Ryanair",
+        "price": 124.38,
+        "date": "2025-09-08",
+        "remainingEconomySeats": 157,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Dublin Airport",
+        "flightTime": "2h 30m"
+      },
+      {
+        "airCompany": "TAP Air Portugal",
+        "price": 292.0,
+        "date": "2025-08-06",
+        "remainingEconomySeats": 149,
+        "remainingBusinessSeats": 14,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Dublin Airport",
         "flightTime": "2h 30m"
@@ -841,26 +744,49 @@ function initData() {
   },
   {
     "idDestination": "d14",
-    "tourism": ["architectural", "gastronomic"],
-"name": "Brussels",
+    "destinationInfo": "Brussels is a wonderful European city known for its rich culture and history.",
+    "name": "Brussels",
     "flights": [
       {
+        "airCompany": "TAP Air Portugal",
+        "price": 307.36,
+        "date": "2025-07-15",
+        "remainingEconomySeats": 166,
+        "remainingBusinessSeats": 20,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Brussels Airport",
+        "flightTime": "2h 20m"
+      },
+      {
         "airCompany": "Ryanair",
-        "price": 46.12,
+        "price": 165.21,
+        "date": "2025-08-16",
+        "remainingEconomySeats": 115,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Brussels Airport",
         "flightTime": "2h 20m"
       },
       {
-        "airCompany": "easyJet",
-        "price": 100.54,
+        "airCompany": "TAP Air Portugal",
+        "price": 288.9,
+        "date": "2025-08-17",
+        "remainingEconomySeats": 178,
+        "remainingBusinessSeats": 26,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Brussels Airport",
         "flightTime": "2h 20m"
       },
       {
-        "airCompany": "easyJet",
-        "price": 139.07,
+        "airCompany": "British Airways",
+        "price": 162.47,
+        "date": "2025-08-05",
+        "remainingEconomySeats": 121,
+        "remainingBusinessSeats": 19,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Brussels Airport",
         "flightTime": "2h 20m"
@@ -869,40 +795,49 @@ function initData() {
   },
   {
     "idDestination": "d15",
-    "tourism": ["religious", "architectural"],
-"name": "Athens",
+    "destinationInfo": "Athens is a wonderful European city known for its rich culture and history.",
+    "name": "Athens",
     "flights": [
       {
-        "airCompany": "easyJet",
-        "price": 254.71,
+        "airCompany": "British Airways",
+        "price": 321.84,
+        "date": "2025-07-31",
+        "remainingEconomySeats": 268,
+        "remainingBusinessSeats": 24,
+        "remainingFirstSeats": 17,
         "departureAirport": "Porto",
         "arrivalAirport": "Athens Airport",
         "flightTime": "4h 0m"
       },
       {
         "airCompany": "British Airways",
-        "price": 287.38,
+        "price": 133.65,
+        "date": "2025-08-19",
+        "remainingEconomySeats": 268,
+        "remainingBusinessSeats": 48,
+        "remainingFirstSeats": 18,
         "departureAirport": "Porto",
         "arrivalAirport": "Athens Airport",
         "flightTime": "4h 0m"
       },
       {
         "airCompany": "easyJet",
-        "price": 55.2,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Athens Airport",
-        "flightTime": "4h 0m"
-      },
-      {
-        "airCompany": "British Airways",
-        "price": 188.92,
+        "price": 227.07,
+        "date": "2025-06-29",
+        "remainingEconomySeats": 173,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Athens Airport",
         "flightTime": "4h 0m"
       },
       {
         "airCompany": "TAP Air Portugal",
-        "price": 47.12,
+        "price": 421.62,
+        "date": "2025-08-01",
+        "remainingEconomySeats": 285,
+        "remainingBusinessSeats": 50,
+        "remainingFirstSeats": 12,
         "departureAirport": "Porto",
         "arrivalAirport": "Athens Airport",
         "flightTime": "4h 0m"
@@ -911,40 +846,49 @@ function initData() {
   },
   {
     "idDestination": "d16",
-    "tourism": ["adventure", "architectural"],
+    "destinationInfo": "Oslo is a wonderful European city known for its rich culture and history.",
     "name": "Oslo",
     "flights": [
       {
         "airCompany": "TAP Air Portugal",
-        "price": 172.52,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Oslo Airport",
-        "flightTime": "3h 50m"
-      },
-      {
-        "airCompany": "Ryanair",
-        "price": 443.07,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Oslo Airport",
-        "flightTime": "3h 50m"
-      },
-      {
-        "airCompany": "easyJet",
-        "price": 316.54,
+        "price": 94.69,
+        "date": "2025-08-06",
+        "remainingEconomySeats": 228,
+        "remainingBusinessSeats": 46,
+        "remainingFirstSeats": 10,
         "departureAirport": "Porto",
         "arrivalAirport": "Oslo Airport",
         "flightTime": "3h 50m"
       },
       {
         "airCompany": "easyJet",
-        "price": 129.44,
+        "price": 327.17,
+        "date": "2025-06-13",
+        "remainingEconomySeats": 172,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Oslo Airport",
         "flightTime": "3h 50m"
       },
       {
-        "airCompany": "TAP Air Portugal",
-        "price": 100.66,
+        "airCompany": "British Airways",
+        "price": 284.91,
+        "date": "2025-07-06",
+        "remainingEconomySeats": 264,
+        "remainingBusinessSeats": 26,
+        "remainingFirstSeats": 20,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Oslo Airport",
+        "flightTime": "3h 50m"
+      },
+      {
+        "airCompany": "easyJet",
+        "price": 288.0,
+        "date": "2025-07-14",
+        "remainingEconomySeats": 151,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Oslo Airport",
         "flightTime": "3h 50m"
@@ -953,40 +897,38 @@ function initData() {
   },
   {
     "idDestination": "d17",
-    "tourism": ["adventure", "architectural"],
+    "destinationInfo": "Helsinki is a wonderful European city known for its rich culture and history.",
     "name": "Helsinki",
     "flights": [
       {
-        "airCompany": "TAP Air Portugal",
-        "price": 157.98,
+        "airCompany": "easyJet",
+        "price": 242.52,
+        "date": "2025-07-13",
+        "remainingEconomySeats": 148,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Helsinki Airport",
         "flightTime": "4h 0m"
       },
       {
         "airCompany": "TAP Air Portugal",
-        "price": 31.59,
+        "price": 87.76,
+        "date": "2025-08-31",
+        "remainingEconomySeats": 236,
+        "remainingBusinessSeats": 30,
+        "remainingFirstSeats": 10,
         "departureAirport": "Porto",
         "arrivalAirport": "Helsinki Airport",
         "flightTime": "4h 0m"
       },
       {
-        "airCompany": "TAP Air Portugal",
-        "price": 132.09,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Helsinki Airport",
-        "flightTime": "4h 0m"
-      },
-      {
-        "airCompany": "British Airways",
-        "price": 229.2,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Helsinki Airport",
-        "flightTime": "4h 0m"
-      },
-      {
-        "airCompany": "Ryanair",
-        "price": 400.7,
+        "airCompany": "easyJet",
+        "price": 290.84,
+        "date": "2025-08-12",
+        "remainingEconomySeats": 115,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Helsinki Airport",
         "flightTime": "4h 0m"
@@ -995,33 +937,49 @@ function initData() {
   },
   {
     "idDestination": "d18",
-    "tourism": ["architectural", "religious"],
+    "destinationInfo": "Warsaw is a wonderful European city known for its rich culture and history.",
     "name": "Warsaw",
     "flights": [
       {
-        "airCompany": "easyJet",
-        "price": 75.27,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Warsaw Airport",
-        "flightTime": "3h 20m"
-      },
-      {
         "airCompany": "British Airways",
-        "price": 184.25,
+        "price": 308.66,
+        "date": "2025-07-15",
+        "remainingEconomySeats": 232,
+        "remainingBusinessSeats": 30,
+        "remainingFirstSeats": 12,
         "departureAirport": "Porto",
         "arrivalAirport": "Warsaw Airport",
         "flightTime": "3h 20m"
       },
       {
         "airCompany": "TAP Air Portugal",
-        "price": 320.54,
+        "price": 34.67,
+        "date": "2025-07-03",
+        "remainingEconomySeats": 233,
+        "remainingBusinessSeats": 29,
+        "remainingFirstSeats": 11,
         "departureAirport": "Porto",
         "arrivalAirport": "Warsaw Airport",
         "flightTime": "3h 20m"
       },
       {
-        "airCompany": "easyJet",
-        "price": 335.04,
+        "airCompany": "TAP Air Portugal",
+        "price": 307.16,
+        "date": "2025-07-19",
+        "remainingEconomySeats": 225,
+        "remainingBusinessSeats": 35,
+        "remainingFirstSeats": 19,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Warsaw Airport",
+        "flightTime": "3h 20m"
+      },
+      {
+        "airCompany": "Ryanair",
+        "price": 31.71,
+        "date": "2025-06-26",
+        "remainingEconomySeats": 143,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Warsaw Airport",
         "flightTime": "3h 20m"
@@ -1030,26 +988,49 @@ function initData() {
   },
   {
     "idDestination": "d19",
-    "tourism": ["architectural", "adventure"],
+    "destinationInfo": "Zurich is a wonderful European city known for its rich culture and history.",
     "name": "Zurich",
     "flights": [
       {
         "airCompany": "Ryanair",
-        "price": 320.46,
+        "price": 434.87,
+        "date": "2025-09-01",
+        "remainingEconomySeats": 100,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Zurich Airport",
         "flightTime": "2h 20m"
       },
       {
-        "airCompany": "Ryanair",
-        "price": 273.55,
+        "airCompany": "TAP Air Portugal",
+        "price": 395.47,
+        "date": "2025-06-13",
+        "remainingEconomySeats": 113,
+        "remainingBusinessSeats": 11,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Zurich Airport",
         "flightTime": "2h 20m"
       },
       {
         "airCompany": "easyJet",
-        "price": 265.19,
+        "price": 341.53,
+        "date": "2025-06-26",
+        "remainingEconomySeats": 106,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Zurich Airport",
+        "flightTime": "2h 20m"
+      },
+      {
+        "airCompany": "TAP Air Portugal",
+        "price": 404.77,
+        "date": "2025-08-22",
+        "remainingEconomySeats": 130,
+        "remainingBusinessSeats": 19,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Zurich Airport",
         "flightTime": "2h 20m"
@@ -1058,33 +1039,49 @@ function initData() {
   },
   {
     "idDestination": "d20",
-    "tourism": ["architectural", "gastronomic"],
+    "destinationInfo": "Munich is a wonderful European city known for its rich culture and history.",
     "name": "Munich",
     "flights": [
       {
-        "airCompany": "Ryanair",
-        "price": 436.99,
+        "airCompany": "British Airways",
+        "price": 156.46,
+        "date": "2025-09-04",
+        "remainingEconomySeats": 128,
+        "remainingBusinessSeats": 23,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Munich Airport",
         "flightTime": "2h 30m"
       },
       {
-        "airCompany": "Ryanair",
-        "price": 63.48,
+        "airCompany": "easyJet",
+        "price": 265.66,
+        "date": "2025-08-30",
+        "remainingEconomySeats": 111,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
+        "departureAirport": "Porto",
+        "arrivalAirport": "Munich Airport",
+        "flightTime": "2h 30m"
+      },
+      {
+        "airCompany": "easyJet",
+        "price": 244.88,
+        "date": "2025-07-07",
+        "remainingEconomySeats": 111,
+        "remainingBusinessSeats": 0,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Munich Airport",
         "flightTime": "2h 30m"
       },
       {
         "airCompany": "TAP Air Portugal",
-        "price": 354.99,
-        "departureAirport": "Porto",
-        "arrivalAirport": "Munich Airport",
-        "flightTime": "2h 30m"
-      },
-      {
-        "airCompany": "British Airways",
-        "price": 282.81,
+        "price": 212.54,
+        "date": "2025-06-25",
+        "remainingEconomySeats": 136,
+        "remainingBusinessSeats": 25,
+        "remainingFirstSeats": 0,
         "departureAirport": "Porto",
         "arrivalAirport": "Munich Airport",
         "flightTime": "2h 30m"
@@ -1094,313 +1091,5 @@ function initData() {
 ];
     localStorage.setItem("destinations", JSON.stringify(destinations));
   }
-
-  // REVIEWS
-  if (!localStorage.reviews) {
-    const reviews = [
-  {
-    "idReview": "r1",
-    "idDestination": "d12",
-    "userName": "bob.johnson",
-    "userCoverPhoto": "https://example.com/users/bob.johnson.jpg",
-    "text": "Enjoyed the boat tours and old town charm.",
-    "images": [
-      "https://example.com/reviews/d12_0.jpg"
-    ]
-  },
-  {
-    "idReview": "r2",
-    "idDestination": "d4",
-    "userName": "charlie.brown",
-    "userCoverPhoto": "https://example.com/users/charlie.brown.jpg",
-    "text": "A photographer's paradise!",
-    "images": [
-      "https://example.com/reviews/d4_1.jpg"
-    ]
-  },
-  {
-    "idReview": "r3",
-    "idDestination": "d5",
-    "userName": "paula.scott",
-    "userCoverPhoto": "https://example.com/users/paula.scott.jpg",
-    "text": "Friendly locals and great coffee spots.",
-    "images": [
-      "https://example.com/reviews/d5_2.jpg"
-    ]
-  },
-  {
-    "idReview": "r4",
-    "idDestination": "d11",
-    "userName": "laura.young",
-    "userCoverPhoto": "https://example.com/users/laura.young.jpg",
-    "text": "Loved the local food and culture.",
-    "images": [
-      "https://example.com/reviews/d11_3.jpg"
-    ]
-  },
-  {
-    "idReview": "r5",
-    "idDestination": "d9",
-    "userName": "quinn.green",
-    "userCoverPhoto": "https://example.com/users/quinn.green.jpg",
-    "text": "Perfect mix of modern and historical vibes.",
-    "images": [
-      "https://example.com/reviews/d9_4.jpg"
-    ]
-  },
-  {
-    "idReview": "r6",
-    "idDestination": "d7",
-    "userName": "sam.baker",
-    "userCoverPhoto": "https://example.com/users/sam.baker.jpg",
-    "text": "Enjoyed the boat tours and old town charm.",
-    "images": [
-      "https://example.com/reviews/d7_5.jpg"
-    ]
-  },
-  {
-    "idReview": "r7",
-    "idDestination": "d19",
-    "userName": "alice.smith",
-    "userCoverPhoto": "https://example.com/users/alice.smith.jpg",
-    "text": "Loved the local food and culture.",
-    "images": [
-      "https://example.com/reviews/d19_6.jpg"
-    ]
-  },
-  {
-    "idReview": "r8",
-    "idDestination": "d17",
-    "userName": "julia.martin",
-    "userCoverPhoto": "https://example.com/users/julia.martin.jpg",
-    "text": "The museums and parks were top-notch.",
-    "images": [
-      "https://example.com/reviews/d17_7.jpg"
-    ]
-  },
-  {
-    "idReview": "r9",
-    "idDestination": "d16",
-    "userName": "diana.taylor",
-    "userCoverPhoto": "https://example.com/users/diana.taylor.jpg",
-    "text": "Perfect mix of modern and historical vibes.",
-    "images": [
-      "https://example.com/reviews/d16_8.jpg"
-    ]
-  },
-  {
-    "idReview": "r10",
-    "idDestination": "d8",
-    "userName": "paula.scott",
-    "userCoverPhoto": "https://example.com/users/paula.scott.jpg",
-    "text": "Public transport was very convenient.",
-    "images": [
-      "https://example.com/reviews/d8_9.jpg"
-    ]
-  },
-  {
-    "idReview": "r11",
-    "idDestination": "d2",
-    "userName": "julia.martin",
-    "userCoverPhoto": "https://example.com/users/julia.martin.jpg",
-    "text": "Crowded but totally worth it!",
-    "images": [
-      "https://example.com/reviews/d2_10.jpg"
-    ]
-  },
-  {
-    "idReview": "r12",
-    "idDestination": "d13",
-    "userName": "paula.scott",
-    "userCoverPhoto": "https://example.com/users/paula.scott.jpg",
-    "text": "Public transport was very convenient.",
-    "images": [
-      "https://example.com/reviews/d13_11.jpg"
-    ]
-  },
-  {
-    "idReview": "r13",
-    "idDestination": "d15",
-    "userName": "quinn.green",
-    "userCoverPhoto": "https://example.com/users/quinn.green.jpg",
-    "text": "A photographer's paradise!",
-    "images": [
-      "https://example.com/reviews/d15_12.jpg"
-    ]
-  },
-  {
-    "idReview": "r14",
-    "idDestination": "d19",
-    "userName": "quinn.green",
-    "userCoverPhoto": "https://example.com/users/quinn.green.jpg",
-    "text": "The museums and parks were top-notch.",
-    "images": [
-      "https://example.com/reviews/d19_13.jpg"
-    ]
-  },
-  {
-    "idReview": "r15",
-    "idDestination": "d4",
-    "userName": "ian.harris",
-    "userCoverPhoto": "https://example.com/users/ian.harris.jpg",
-    "text": "Great nightlife and beautiful architecture.",
-    "images": [
-      "https://example.com/reviews/d4_14.jpg"
-    ]
-  },
-  {
-    "idReview": "r16",
-    "idDestination": "d2",
-    "userName": "quinn.green",
-    "userCoverPhoto": "https://example.com/users/quinn.green.jpg",
-    "text": "Great nightlife and beautiful architecture.",
-    "images": [
-      "https://example.com/reviews/d2_15.jpg"
-    ]
-  },
-  {
-    "idReview": "r17",
-    "idDestination": "d18",
-    "userName": "kevin.walker",
-    "userCoverPhoto": "https://example.com/users/kevin.walker.jpg",
-    "text": "Public transport was very convenient.",
-    "images": [
-      "https://example.com/reviews/d18_16.jpg"
-    ]
-  },
-  {
-    "idReview": "r18",
-    "idDestination": "d6",
-    "userName": "martin.allen",
-    "userCoverPhoto": "https://example.com/users/martin.allen.jpg",
-    "text": "Crowded but totally worth it!",
-    "images": [
-      "https://example.com/reviews/d6_17.jpg"
-    ]
-  },
-  {
-    "idReview": "r19",
-    "idDestination": "d18",
-    "userName": "quinn.green",
-    "userCoverPhoto": "https://example.com/users/quinn.green.jpg",
-    "text": "Perfect mix of modern and historical vibes.",
-    "images": [
-      "https://example.com/reviews/d18_18.jpg"
-    ]
-  },
-  {
-    "idReview": "r20",
-    "idDestination": "d1",
-    "userName": "george.jackson",
-    "userCoverPhoto": "https://example.com/users/george.jackson.jpg",
-    "text": "Friendly locals and great coffee spots.",
-    "images": [
-      "https://example.com/reviews/d1_19.jpg"
-    ]
-  },
-  {
-    "idReview": "r21",
-    "idDestination": "d15",
-    "userName": "ethan.anderson",
-    "userCoverPhoto": "https://example.com/users/ethan.anderson.jpg",
-    "text": "Enjoyed the boat tours and old town charm.",
-    "images": [
-      "https://example.com/reviews/d15_20.jpg"
-    ]
-  },
-  {
-    "idReview": "r22",
-    "idDestination": "d11",
-    "userName": "rachel.adams",
-    "userCoverPhoto": "https://example.com/users/rachel.adams.jpg",
-    "text": "Public transport was very convenient.",
-    "images": [
-      "https://example.com/reviews/d11_21.jpg"
-    ]
-  },
-  {
-    "idReview": "r23",
-    "idDestination": "d2",
-    "userName": "ian.harris",
-    "userCoverPhoto": "https://example.com/users/ian.harris.jpg",
-    "text": "Great nightlife and beautiful architecture.",
-    "images": [
-      "https://example.com/reviews/d2_22.jpg"
-    ]
-  },
-  {
-    "idReview": "r24",
-    "idDestination": "d15",
-    "userName": "kevin.walker",
-    "userCoverPhoto": "https://example.com/users/kevin.walker.jpg",
-    "text": "Amazing city with rich history!",
-    "images": [
-      "https://example.com/reviews/d15_23.jpg"
-    ]
-  },
-  {
-    "idReview": "r25",
-    "idDestination": "d17",
-    "userName": "martin.allen",
-    "userCoverPhoto": "https://example.com/users/martin.allen.jpg",
-    "text": "The museums and parks were top-notch.",
-    "images": [
-      "https://example.com/reviews/d17_24.jpg"
-    ]
-  },
-  {
-    "idReview": "r26",
-    "idDestination": "d20",
-    "userName": "ian.harris",
-    "userCoverPhoto": "https://example.com/users/ian.harris.jpg",
-    "text": "Great nightlife and beautiful architecture.",
-    "images": [
-      "https://example.com/reviews/d20_25.jpg"
-    ]
-  },
-  {
-    "idReview": "r27",
-    "idDestination": "d18",
-    "userName": "sam.baker",
-    "userCoverPhoto": "https://example.com/users/sam.baker.jpg",
-    "text": "Loved the local food and culture.",
-    "images": [
-      "https://example.com/reviews/d18_26.jpg"
-    ]
-  },
-  {
-    "idReview": "r28",
-    "idDestination": "d3",
-    "userName": "tina.carter",
-    "userCoverPhoto": "https://example.com/users/tina.carter.jpg",
-    "text": "Public transport was very convenient.",
-    "images": [
-      "https://example.com/reviews/d3_27.jpg"
-    ]
-  },
-  {
-    "idReview": "r29",
-    "idDestination": "d14",
-    "userName": "oscar.wright",
-    "userCoverPhoto": "https://example.com/users/oscar.wright.jpg",
-    "text": "Loved the local food and culture.",
-    "images": [
-      "https://example.com/reviews/d14_28.jpg"
-    ]
-  },
-  {
-    "idReview": "r30",
-    "idDestination": "d6",
-    "userName": "kevin.walker",
-    "userCoverPhoto": "https://example.com/users/kevin.walker.jpg",
-    "text": "Perfect mix of modern and historical vibes.",
-    "images": [
-      "https://example.com/reviews/d6_29.jpg"
-    ]
-  }
-];
-    localStorage.setItem("reviews", JSON.stringify(reviews));
-  }
 }
-
 initData();
